@@ -36,8 +36,7 @@ pub fn build(b: *std.Build) !void {
         .name = "myapp",
         .src = "src/main.zig",
         .target = target,
-        .deps = &[_]std.build.Pkg{},
-        .mode = mode,
+        .optimize = optimize,
     });
     try app.link(.{});
     app.install();
